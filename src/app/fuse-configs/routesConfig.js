@@ -10,6 +10,7 @@ import RegisterConfig from 'app/main/register/RegisterConfig';
 import UserInterfaceConfig from 'app/main/user-interface/UserInterfaceConfig';
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import naznzariConfigs from 'app/main/naznzari/naznzariConfigs';
 
 const routeConfigs = [
 	...appsConfigs,
@@ -21,7 +22,8 @@ const routeConfigs = [
 	LoginConfig,
 	RegisterConfig,
 	LogoutConfig,
-	CallbackConfig
+	CallbackConfig,
+	...naznzariConfigs
 ];
 
 const routes = [
