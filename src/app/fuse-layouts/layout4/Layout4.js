@@ -91,23 +91,17 @@ const Layout4 = () => {
 				<div className="h-160" />
 
 				<div className={clsx(classes.borderTopRadius16, 'relative h-full bg-indigo-300')}>
-					{scrollPosition < 160 ? (
-						<div className={clsx(classes.borderTopRadius16, 'h-48 flex items-center px-16')}>
-							<div className="flex-grow">
-								<div className="text-16 text-white font-medium">아마존 웹 서비스 학교</div>
-							</div>
+					<div className={clsx(scrollPosition < 160 && classes.borderTopRadius16, 'sticky top-0 h-48 flex items-center justify-center bg-indigo-300 z-50')}>
+						<div className="w-56 h-48 flex items-center justify-center">
+							<Icons icon="FiHome" size="large" className="text-white" />
 						</div>
-					) : (
-						<div className={clsx('sticky top-0 h-48 flex items-center justify-center bg-indigo-300 z-50')}>
-							<div className='w-56 h-48 flex items-center justify-center'>
-								<Icons icon='FiHome' size="large" className="text-white" />
-							</div>
-							<div className="flex-grow flex justify-center text-16 text-white font-medium">아마존 웹 서비스 학교</div>
-							<div className='w-56 h-48 flex items-center justify-center'>
-								<Icons icon='FiMenu' size="large" className="text-white" />
-							</div>
+						<div className="flex-grow flex justify-center text-16 text-white font-medium">
+							아마존 웹 서비스 학교
 						</div>
-					)}
+						<div className="w-56 h-48 flex items-center justify-center">
+							<Icons icon="FiMenu" size="large" className="text-white" />
+						</div>
+					</div>
 
 					{/* Paper Content */}
 					<div className={clsx(classes.borderTopRadius16, 'relative h-full bg-white')}>
